@@ -61,22 +61,20 @@ public class Main {
         // Usuario con campos opcionales diferentes
         Usuario u2 = Usuario.builder()
                 .nombre("Franco")
+                .email("franco.giusti@gmail.com")
                 .direccion("Av. Siempre Viva 123")
                 .rol("LECTOR")
                 .build();
 
-        // Clonar/modificar con toBuilder()
-        Usuario u3 = u1.toBuilder()
-                .rol("ADMIN")
+        // Usuarios con campos minimos
+        Usuario u3 = Usuario.builder()
+                .nombre("Elena")
+                .email("Elena.Moyano@gmail.com")
                 .build();
-
-        // Copiar con cambio puntual usando @With
-        Usuario u4 = u3.withRol("SUPERVISOR");
 
         System.out.println(u1);
         System.out.println(u2);
         System.out.println(u3);
-        System.out.println(u4);
 
         System.out.println("\n******* PRUEBA PATRÓN PROTOTYPE *******\n");
 

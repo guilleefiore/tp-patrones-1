@@ -3,12 +3,13 @@ package com.biblioteca.singleton;
 import java.util.ArrayList;
 import java.util.List;
 
+// Clase que almacena libros
 public enum DatabaseEnum {
-    INSTANCE; // ÚNICA instancia garantizada por Java
+    INSTANCE; // ÚNICA instancia garantizada por la clase ENUM
 
-    private final List<String> libros = new ArrayList<>();
+    private final List<String> libros = new ArrayList<>(); // Guardo la lista de libros
 
-    // API mínima
+    // Métodos públicos
     public void agregarLibro(String titulo) {
         libros.add(titulo);
     }
